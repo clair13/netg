@@ -1,6 +1,6 @@
 class CitationsController < ApplicationController
   def index
-    @citations = Citation.all
+    @citations = Citation.all.paginate(:page => params[:page], :per_page => 12)
   end
 
   def new
