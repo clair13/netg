@@ -9,7 +9,7 @@
   <% @citations.each do |citation| %>
     <tr>
       <td><%= citation.title %></td>
-      <td><%= citation.created_at %></td>
+      <td><%= citation.created_at.strftime("%d %B %Y") %></td>
     </tr>
   <% end %>
 </table>
