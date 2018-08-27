@@ -1,9 +1,12 @@
 <h1>Listing citations</h1>
+<div class='button'>
+ <%= link_to '<button type="button">New Citation</button>'.html_safe, new_citation_path %>
+</div>
 
-<table>
+<table id="citations">
   <tr>
-    <th>description</th>
-    <th>Text</th>
+    <th>Quotes</th>
+    <th>Date</th>
   </tr>
  
   <% @citations.each do |citation| %>
@@ -13,5 +16,4 @@
     </tr>
   <% end %>
 </table>
-
 <%= will_paginate @citations %>
